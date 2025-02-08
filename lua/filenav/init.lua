@@ -37,8 +37,11 @@ local function update_history()
     return
   end
 
-  if #history > (config.max_history or 100) then
-    table.remove(history, 1)
+  local max_history = config.max_history or 100
+  if #history >= max_history then
+    for _ = 1, #history - max_history + 1 do
+      table.remove(history, 1)
+    end
   end
 
   -- Remove all entries after the current position
