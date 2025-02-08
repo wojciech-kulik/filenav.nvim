@@ -18,22 +18,21 @@ it also contains jumps within the same buffer, which is not what we want.
 the browser's back and forward buttons. It maintains a list of visited files and
 allows you to navigate between them.
 
-If you go back to a file and navigate to a new file, all the following files will
-be removed from the history.
-
 ### Example 1
 
-- You visit files: 1, 2, 3, 4
-- You go back to file 2 using `:FilenavPrev` twice
-- You navigate to file 5 using Telescope
+- Visit files: 1, 2, 3, 4
+- Go back to file 2 using `:FilenavPrev` twice
+- Navigate to file 5 using Telescope
 - The history will be: 1, 2, 5
 
 ### Example 2
 
-- You visit files: 1, 2, 3, 4
-- You navigate to file 2 using Telescope
-- You navigate to file 5 using Telescope
+- Visit files: 1, 2, 3, 4
+- Navigate to file 2 using Telescope
+- Navigate to file 5 using Telescope
 - The history will be: 1, 2, 3, 4, 2, 5
+
+If you call `:FilenavPrev` you will got back to file 2, then 4, etc.
 
 ## Installation
 
