@@ -37,6 +37,7 @@ local function update_history()
     return
   end
 
+  -- Truncate history if it exceeds the max_history
   local max_history = config.max_history or 100
   if #history >= max_history then
     for _ = 1, #history - max_history + 1 do
@@ -58,8 +59,10 @@ local function update_history()
     end
   end
 
+  --- Insert the new path
   table.insert(history, path)
 
+  --- Update the history and position
   history_per_window[window_id] = history
   position_per_window[window_id] = #history
 end
