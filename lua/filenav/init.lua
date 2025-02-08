@@ -117,6 +117,9 @@ function M.setup(opts)
       callback = M.prev_file,
     })
   end
+
+  vim.api.nvim_create_user_command("FilenavNext", M.next_file, { nargs = 0 })
+  vim.api.nvim_create_user_command("FilenavPrev", M.prev_file, { nargs = 0 })
 end
 
 return M

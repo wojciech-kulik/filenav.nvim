@@ -40,7 +40,6 @@ be removed from the history.
 ```lua
 return {
   "wojciech-kulik/filenav.nvim",
-  dev = true,
   config = function()
     require("filenav").setup({
       next_file_key = "<M-i>",
