@@ -50,3 +50,12 @@ return {
   end,
 }
 ```
+
+## Usage
+
+By default, you can use `<C-M-i>` and `<C-M-o>` to navigate between files.
+
+You can also use the following commands to navigate between files:
+
+- `:FilenavPrev` - go back to the previous file
+- `:FilenavNext` - go forward to the next file
