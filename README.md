@@ -32,7 +32,7 @@ allows you to navigate between them.
 - Navigate to file 5 using Telescope
 - The history will be: 1, 2, 3, 4, 2, 5
 
-If you call `:FilenavPrev` you will got back to file 2, then 4, etc.
+If you call `:FilenavPrev` you will go back to file 2, then 4, etc.
 
 ## Installation
 
