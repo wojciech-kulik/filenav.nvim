@@ -1,8 +1,8 @@
 local M = {}
 
 ---@class Options
----@field next_file_key string|nil example: "<M-i>"
----@field prev_file_key string|nil example: "<M-o>"
+---@field next_file_key string|nil example: "<C-M-i>"
+---@field prev_file_key string|nil example: "<C-M-o>"
 ---@field max_history number|nil default: 100
 ---@field remove_duplicates boolean|nil default: false
 
