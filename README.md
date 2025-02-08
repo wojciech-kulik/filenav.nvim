@@ -24,15 +24,15 @@ be removed from the history.
 ### Example 1
 
 - You visit files: 1, 2, 3, 4
-- You go back to file 2 using keybindings
-- You navigate to file 5
+- You go back to file 2 using `:FilenavPrev` multiple times
+- You navigate to file 5 using Telescope
 - The history will be: 1, 2, 5
 
 ### Example 2
 
 - You visit files: 1, 2, 3, 4
 - You go back to file 2 using Telescope
-- You navigate to file 5
+- You navigate to file 5 using Telescope
 - The history will be: 1, 2, 3, 4, 2, 5
 
 ## Installation
