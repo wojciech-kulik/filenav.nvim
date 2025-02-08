@@ -6,7 +6,7 @@ A simple navigation between visited files in Neovim.
 
 Neovim has a built-in command `:bp` and `:bn` to navigate between buffers.
 However, it's not practical to use. If you visit buffers: 1, 2, 3, 4, and jump
-to buffer 2, then `:bp` will take you to buffer 1, not buffer 4. This is not
+to buffer 2 using `:b2`, then `:bp` will take you to buffer 1, not buffer 4. This is not
 what we want.
 
 There is also `<C-o>` and `<C-i>` to navigate between the jump list entries. However,
@@ -24,14 +24,14 @@ be removed from the history.
 ### Example 1
 
 - You visit files: 1, 2, 3, 4
-- You go back to file 2 using `:FilenavPrev` multiple times
+- You go back to file 2 using `:FilenavPrev` twice
 - You navigate to file 5 using Telescope
 - The history will be: 1, 2, 5
 
 ### Example 2
 
 - You visit files: 1, 2, 3, 4
-- You go back to file 2 using Telescope
+- You navigate to file 2 using Telescope
 - You navigate to file 5 using Telescope
 - The history will be: 1, 2, 3, 4, 2, 5
 
@@ -42,8 +42,8 @@ return {
   "wojciech-kulik/filenav.nvim",
   config = function()
     require("filenav").setup({
-      next_file_key = "<C-M-i>",
-      prev_file_key = "<C-M-o>",
+      next_file_key = "<M-i>",
+      prev_file_key = "<M-o>",
       max_history = 100,
       remove_duplicates = false,
     })
@@ -53,7 +53,7 @@ return {
 
 ## Usage
 
-By default, you can use `<C-M-i>` and `<C-M-o>` to navigate between files.
+By default, you can use `<M-i>` and `<M-o>` to navigate between files.
 
 You can also use the following commands:
 
